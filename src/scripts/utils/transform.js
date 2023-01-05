@@ -9,7 +9,7 @@ export function getTranslate(el) {
     if (!window.getComputedStyle) return;
 
     const style = getComputedStyle(el);
-    const transform = style.transform || style.webkitTransform || style.mozTransform;
+    const transform = style.transform || style.webkitTransform || style.mozTransform || '';
 
     let mat = transform.match(/^matrix3d\((.+)\)$/);
     if (mat) {

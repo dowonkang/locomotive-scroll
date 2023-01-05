@@ -1,4 +1,4 @@
-/* locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+/* locomotive-scroll v4.1.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -1283,7 +1283,7 @@
        *
        * @param  Available options :
        *          target {node, string, "top", "bottom", int} - The DOM element we want to scroll to
-       *          options {object} - Options object for additionnal settings.
+       *          options {object} - Options object for additional settings.
        * @return {void}
        */
 
@@ -1899,7 +1899,7 @@
     var translate = {};
     if (!window.getComputedStyle) return;
     var style = getComputedStyle(el);
-    var transform = style.transform || style.webkitTransform || style.mozTransform;
+    var transform = style.transform || style.webkitTransform || style.mozTransform || '';
     var mat = transform.match(/^matrix3d\((.+)\)$/);
 
     if (mat) {
@@ -2868,7 +2868,7 @@
        *
        * @param  Available options :
        *          target {node, string, "top", "bottom", int} - The DOM element we want to scroll to
-       *          options {object} - Options object for additionnal settings.
+       *          options {object} - Options object for additional settings.
        * @return {void}
        */
 
